@@ -1,0 +1,64 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,200,400,300,700,900,400italic);
+body {
+  background-color: grey;
+}
+.bottom-area{
+    height: 200px;
+    background-color: blue;
+    color: #fff;
+    font-size: 0.8rem;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.top-fixed-nav a {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    height: 50px;
+    background-color: gray;
+    right: auto;
+}
+.about{
+  height: 300px;
+}
+.photo-rounded{
+  margin: 100px;
+}
+.col-third{
+  width:150px;
+  height: 200px;
+  background-color: red;
+  border: 10px solid blue;
+
+}
+.app{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  border: 1px solid red;
+  color:yellow;
+}
+.placeholder{
+    height: 250px;
+    width: 100px;
+    color:green;
+    background-color: light-gray;
+        border: 1px solid $mid-gray;
+
+        transition: 0.1s ease-out all;
+
+        &:hover {
+            border: 10px solid $blue;
+        }
+}
+.contact{
+  height: 200px;
+}
+.row{
+  padding: 20px;
+}

@@ -1,0 +1,29 @@
+.name{
+  padding-left:500px;
+}
+.quote-area{
+  padding:100px;
+  margin-left:400px;
+  width:300px;
+  height:100px;
+  background-color:gray;
+
+}
+.mybutton{
+  background-color:orange;
+  float:right;
+  position: relative;
+  top: 130px;
+  right: 10px;
+}
+
+.twitter-share-button {
+  background-color:orange;
+  float:left;
+  position: relative;
+  top: 130px;
+  right: 10px;
+}
+.quote{
+  font-size: 1em;
+}
