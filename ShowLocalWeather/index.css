@@ -1,0 +1,50 @@
+body {
+
+  background-repeat: no-repeat;
+}
+.screen{
+
+
+}
+.txt{
+  padding-top: 20px;
+  margin-top: 20px;
+  color: red;
+}
+.country{
+  float: left;
+  width: 150px;
+  height: 50px;
+  background-color: white;
+  margin-left: 400px;
+  margin-top: 160px;
+
+}
+.wheather{
+  float: left;
+  width: 150px;
+  height: 50px;
+  background-color: white;
+  margin-left: 555px;
+  margin-top: -50px;
+}
+.speed{
+  width: 150px;
+  height: 50px;
+  background-color: white;
+  margin-left: 710px;
+  margin-top: 176px;
+}
+.temperature{
+  float: left;
+  margin-left: 600px;
+  margin-top: 20px;
+  font-size: 2em;
+  color:yellow;
+}
+.icon{
+  width: 50px;
+  height: 50px;
+  margin-left: 550px;
+  margin-top: 22px;
+}
