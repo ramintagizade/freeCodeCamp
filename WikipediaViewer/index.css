@@ -1,0 +1,36 @@
+.body{
+  background-color: blue;
+}
+.search-input{
+  margin-left: 590px;
+  margin-top: 200px;
+  background-image: url("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRsN9bgT4F1Nkr2hqkZCI6Ym4012BDhDsnkaLlNKa8RJs3igUT4");
+  background-repeat: no-repeat;
+  background-size: 45px 25px;
+}
+.text-area{
+  position: relative;
+  color:green;
+  margin-top: 230px;
+}
+.input{
+  margin-left: 530px;
+  margin-top: -24px;
+}
+.clearable-input > [data-clear-input] {
+  position: absolute;
+  font-weight: bold;
+  font-size: 1.5em;
+  padding: 0 0.2em;
+  margin-left: -23px;
+  line-height: 1em;
+  cursor: pointer;
+}
+
+.art{
+  background-color: yellow;
+  cursor: pointer;
+}
+.art:hover {
+  border-left: 2px solid orange;
+}
