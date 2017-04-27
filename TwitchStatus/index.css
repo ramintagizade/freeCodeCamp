@@ -1,0 +1,64 @@
+.containers{
+  background-color: red;
+  position: relative;
+  height: 100vh;
+
+}
+.main-area{
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 450px;
+  background-color: green;
+  overflow-y: scroll;
+  height: 500px;
+  width: 450px;
+}
+.top-nav{
+  height: 50px;
+  background-color: yellow;
+}
+.all{
+
+  float: left;
+  border-right:  3px solid white;
+  padding-right: 80px;
+  line-height: 34px;
+  cursor: pointer;
+}
+.online{
+  float: left;
+  border-right:  3px solid white;
+  padding-right: 65px;
+  line-height: 34px;
+  cursor: pointer;
+}
+.offline{
+  float: left;
+  padding-top: 5px;
+  cursor: pointer;
+}
+.text{
+  color: blue;
+  text-align: center;
+  padding-left: 40px;
+}
+#inp{
+  margin: 25px;
+  margin-left: 50px;
+  width: 330px;
+}
+.all:hover {
+  border-bottom: 2px solid red;
+
+}
+.online:hover {
+  border-bottom: 2px solid red;
+
+}
+.offline:hover {
+  border-bottom-width: 20em;
+  border-bottom: 2px solid red;
+}
+.search-area{
+  border-bottom: 2px solid gray;
+}
