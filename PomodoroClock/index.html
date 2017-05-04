@@ -1,0 +1,38 @@
+<html>
+  <head> <link rel="stylesheet" href="index.css">  </head>
+  <body>
+    <div class="main">
+      <div class="break">
+        <p>BREAK LENGTH </p>
+        <div class="bdecrease" onclick="decreaseBreak()">
+          -
+        </div>
+        <div class="btime"> 3
+        </div>
+        <div class="bincrease" onclick="increaseBreak()">
+          +
+        </div>
+      </div>
+      <div class="session">
+        <p> SESSION LENGTH </p>
+        <div class="sdecrease" onclick="decreaseSession()">
+          -
+        </div>
+        <div class="stime">
+          7
+        </div>
+        <div class="sincrease" onclick="increaseSession()">
+          +
+        </div>
+      </div>
+      <div class="circle" onclick="resume()">
+        <p class="circle-text"> Session </p>
+        <div class="timer">
+        </div>
+      </div>
+      <canvas id="my_canvas"> </canvas>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"> </script>
+    <script src="index.js"> </script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+.circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 200px;
+  border: solid green;
+  margin-left: 490px;
+  margin-top: 220px;
+}
+.break{
+  position: absolute;
+  margin-left: 500px;
+  margin-top: -70px;
+  font-size: 0.7em;
+}
+.session{
+  font-size: 0.7em;
+  position: absolute;
+  margin-left: 700px;
+  margin-top: -70px;
+}
+.bdecrease{
+  font-size: 2em;
+  float: left;
+}
+.bincrease{
+  position: absolute;
+  font-size: 2em;
+  margin-left: 65px;
+}
+.btime{
+  font-size: 2em;
+  float: left;
+  margin-left: 20px;
+}
+.sdecrease{
+  float: left;
+  font-size: 2em;
+}
+.stime{
+  margin-left: 20px;
+  float: left;
+  font-size: 2em;
+}
+.sincrease{
+    position: absolute;
+    font-size: 2em;
+    margin-left: 65px;
+}
+.circle-text{
+  margin-left: 100px;
+  margin-top: 40px;
+  font-size: 2em;
+}
+.timer{
+  margin-left: 120px;
+  margin-top: 120px;
+  font-size: 2em;
+}
+#my-canvas{
+  width: 80px;
+  height: 80px;
+  border: 1 px dashed red;
+  background-color: green;
+}
