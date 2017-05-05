@@ -15,6 +15,9 @@ function increaseSession(){
   res = parseInt($(".stime").text());
   res++;
   $(".stime").text(res);
+  if(resumeSession){
+    $(".timer").html($(".stimer").text());
+  }
 }
 function decreaseSession(){
   var res = 0;
@@ -22,6 +25,9 @@ function decreaseSession(){
   if(res>1)
     res--;
   $(".stime").text(res);
+  if(resumeSession){
+    $(".timer").html($(".stimer").text());
+  }
 }
 function increaseBreak(){
   var res = 0;
@@ -38,14 +44,34 @@ function decreaseBreak(){
 }
 function startSession(){
   $(".circle-text").text("Session");
-  var count=$(".stime").text();
   var counter =setInterval(timer, 1000); // every second
+  count=$(".stime").text();
   var seconds = 60;
   var minutes = count-1;
   var per = 0;
   function timer() {
-    seconds = seconds - 1;
-    $(".timer").text(minutes +" : "+ seconds);
+    if(!resumeSession)
+      seconds = seconds - 1;
+    if(resumeSession){
+      var temp =$(".stime").text();
+      // value changes
+      if(temp!=count){
+        count = temp;
+        per = 0;
+        seconds = 60;
+        minutes = count-1;
+        $('.circle').css({background: "linear-gradient(to top, green "+0+"%,transparent "+0+"%,transparent 100%)"});
+        $(".timer").text($(".stime").text());
+      }
+    }
+    else
+      $(".timer").text(minutes +" : "+ seconds);
+    // increase drawing percentage
+    if(per <= 100 && !resumeSession){
+      per = per + 100/(count*60);
+      $('.circle').css({background: "linear-gradient(to top, green "+per+"%,transparent "+per+"%,transparent 100%)"});
+    }
+
     if(minutes==0 && seconds==0){
       clearInterval(counter);
       startBreak();
@@ -56,13 +82,6 @@ function startSession(){
       minutes = minutes - 1;
     }
   }
-  var time = (count*60/100)*1000;
-  setInterval(function(){
-    per++;
-    if(per <= 100){
-      $('.circle').css({background: "linear-gradient(to top, green "+per+"%,transparent "+per+"%,transparent 100%)"});
-    }
-  },time);
 }
 
 function startBreak(){
@@ -73,8 +92,27 @@ function startBreak(){
   var minutes = count-1;
   var per = 0;
   function timer() {
-    seconds = seconds - 1;
-    $(".timer").text(minutes +" : "+ seconds);
+    if(!resumeBreak)
+      seconds = seconds - 1;
+    if(resumeBreak){
+        var temp =$(".btime").text();
+        // value changes
+        if(temp!=count){
+          count = temp;
+          per = 0;
+          seconds = 60;
+          minutes = count-1;
+          $('.circle').css({background: "linear-gradient(to top, red "+0+"%,transparent "+0+"%,transparent 100%)"});
+          $(".timer").text($(".btime").text());
+        }
+    }
+    else
+      $(".timer").text(minutes +" : "+ seconds);
+    // increase drawing percentage
+    if(per <= 100 && !resumeBreak){
+      per = per + 100/(count*60);
+      $('.circle').css({background: "linear-gradient(to top, red "+per+"%,transparent "+per+"%,transparent 100%)"});
+    }
     if(minutes==0 && seconds==0){
       clearInterval(counter);
       startSession();
@@ -85,12 +123,5 @@ function startBreak(){
       minutes = minutes - 1;
     }
   }
-  var time = (count*60/100)*1000;
-  setInterval(function(){
-    per++;
-    if(per <= 100){
-      $('.circle').css({background: "linear-gradient(to top, red "+per+"%,transparent "+per+"%,transparent 100%)"});
-    }
-  },time);
 }
 startSession();
