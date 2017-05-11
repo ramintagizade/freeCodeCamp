@@ -1,0 +1,52 @@
+<html>
+<meta name="viewport" content="width=320" />
+  <head> <link rel="stylesheet" href="index.css"</head>
+  <body>
+    <div class="main">
+      <div class="board">
+        <div class="menu">
+          <p> How do you want to play? </p>
+          <p class="one_player" onclick="displayOptions1()"> One Player </p>
+          <p class="two_player" onclick="displayOptions2()"> Two Player </p>
+        </div>
+        <div class="choose1">
+          <p> Would you like to be X or O? </p>
+          <p id="x1" class="x" onclick="playGame1()">X</p>
+          <p id="o1" class="o" onclick="playGame1()">O</p>
+          <p class="back" onclick="returnToMenu()"> &#11013; Back </p>
+        </div>
+        <div class="choose2">
+          <p> Player 1 : Would you like X or O? </p>
+          <p id="x" class="x" onclick="playGame2()">X</p>
+          <p id="o" class="o" onclick="playGame2()">O</p>
+          <p class="back" onclick="returnToMenu()"> &#11013; Back </p>
+        </div>
+        <div class="game-cells">
+          <div class="your-turn"> Your turn! </div>
+          <div class="computer-turn"> Computer's turn </div>
+          <div class="player1">
+             <p class="score"> 0 </p>
+             <p class="player1-text"> player 1 </p>
+          </div>
+          <div class="computer">
+            <p class="score"> 0 </p>
+            <p class="computer-text"> computer </p>
+          </div>
+          <div class="reset" onclick="reset()"> Reset All </div>
+          <div class="cell1 cells" id="cell1"> <p class="ctext"></p></div>
+          <div class="cell2 cells" id="cell2"> <p></p></div>
+          <div class="cell3 cells" id="cell3"> <p></p></div>
+          <div class="cell4 cells" id="cell4"> <p></p></div>
+          <div class="message"> </div>
+          <div class="cell5 cells" id="cell5"> <p></p></div>
+          <div class="cell6 cells" id="cell6"> <p></p></div>
+          <div class="cell7 cells" id="cell7"> <p></p></div>
+          <div class="cell8 cells" id="cell8"> <p></p></div>
+          <div class="cell9 cells" id="cell9"> <p></p></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="index.js"> </script>
+</html>

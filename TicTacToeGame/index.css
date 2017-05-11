@@ -1,0 +1,252 @@
+.main{
+  height: 710px;
+}
+.board{
+  height:62%;
+  width:35%;
+  background-color: #808000;
+  margin-left: 370px;
+  margin-top: 100px;
+  border-radius: 10px;
+  border-left: 20px solid #f0b487;
+  border-right: 20px solid #f0b487;
+  border-top: 40px solid #f0b487;
+  border-bottom:  40px solid #f0b487;
+  display: inline-block;
+}
+.menu {
+  text-align: center;
+  font-size: 2em;
+}
+.one_player{
+  float: left;
+  margin-left: 32px;
+}
+
+.two_player{
+  float: left;
+  margin-left: 83px;
+
+}
+.one_player:hover {
+    border:  dashed white;
+    cursor: pointer;
+}
+.two_player:hover {
+    border:  dashed white;
+    cursor: pointer;
+}
+.choose1{
+  text-align: center;
+  font-size: 2em;
+}
+.choose2{
+  text-align: center;
+  font-size: 2em;
+}
+.x{
+  float: left;
+  margin-left: 155px;
+}
+.o{
+  float: left;
+  margin-left: 65px;
+}
+.x:hover {
+    border:  dashed white;
+    cursor: pointer;
+}
+.o:hover {
+    border:  dashed white;
+    cursor: pointer;
+}
+.back{
+  position: absolute;
+  margin-top: 200px;
+  margin-left: 150px;
+}
+p{
+  color: white;
+}
+.back:hover{
+  cursor: pointer;
+}
+.cell1{
+  color:white;
+  float: left;
+  width: 144px;
+  height: 144px;
+  border-right: thick solid blue;
+  border-bottom: thick solid blue;
+  font-size: 5em;
+  display:flex;
+  align-items: center;
+  justify-content:center;
+}
+
+.cell2{
+  color:white;
+  float: left;
+  text-align: center;
+  width: 144px;
+  height: 144px;
+  border-right: thick solid blue;
+  border-bottom: thick solid blue;
+  font-size: 5em;
+  display:flex;
+  align-items: center;
+  justify-content:center;
+}
+.cell3{
+  color:white;
+  float: left;
+  text-align: center;
+  width: 144px;
+  height: 144px;
+  border-bottom: thick solid blue;
+  font-size: 5em;
+  display:flex;
+  align-items: center;
+  justify-content:center;
+}
+.cell4{
+  color:white;
+  float: left;
+  text-align: center;
+  width: 144px;
+  height: 144px;
+  border-right: thick solid blue;
+  border-bottom: thick solid blue;
+  font-size: 5em;
+  display:flex;
+  align-items: center;
+  justify-content:center;
+}
+.cell5{
+  color:white;
+  float: left;
+  text-align: center;
+  width: 144px;
+  height: 144px;
+  border-right: thick solid blue;
+  border-bottom: thick solid blue;
+  font-size: 5em;
+  display:flex;
+  align-items: center;
+  justify-content:center;
+}
+.cell6{
+  color:white;
+  float: left;
+  text-align: center;
+  width: 144px;
+  height: 144px;
+  border-bottom: thick solid blue;
+  font-size: 5em;
+  display:flex;
+  align-items: center;
+  justify-content:center;
+}
+.cell7{
+  color:white;
+  float: left;
+  text-align: center;
+  width: 144px;
+  height: 142px;
+  border-right: thick solid blue;
+  font-size: 5em;
+  display:flex;
+  align-items: center;
+  justify-content:center;
+}
+.cell8{
+  color:white;
+  float: left;
+  text-align: center;
+  width: 144px;
+  height: 142px;
+  border-right: thick solid blue;
+  font-size: 5em;
+  display:flex;
+  align-items: center;
+  justify-content:center;
+}
+.cell9{
+  color:white;
+  float: left;
+  text-align: center;
+  width: 144px;
+  height: 142px;
+  font-size: 5em;
+  display:flex;
+  align-items: center;
+  justify-content:center;
+}
+.your-turn {
+  float: left;
+  height: 50px;
+  width: 160px;
+  background-color: #00c8c8;
+  margin-top: -90px;
+}
+.computer-turn {
+  float: left;
+  height: 50px;
+  width: 160px;
+  background-color: red;
+  margin-top: -90px;
+  margin-left: 280px;
+}
+.player1{
+  height: 50px;
+  width: 80px;
+  float: left;
+  margin-top: -70px;
+  margin-left: 64px;
+}
+
+.player1 > .score{
+  color:#825644;
+  margin-top: 30px;
+}
+.player1-text{
+  margin-top: -20px;
+  color:#825644;
+}
+.computer{
+  height: 50px;
+  width: 80px;
+  float: left;
+  margin-top: -70px;
+  margin-left: 200px;
+}
+.computer > .score{
+  margin-top: 30px;
+  color:#825644;
+}
+.computer-text{
+  margin-top: -20px;
+  color:#825644;
+}
+.reset{
+  float: left;
+  height: 20px;
+  width: 80px;
+  margin-left: 340px;
+  margin-top: -34px;
+  color:#825644;
+}
+.reset:hover{
+  cursor: pointer;
+  border:  dashed white;
+}
+.message{
+  position: absolute;
+  width: 34.5%;
+  color: white;
+  font-size: 3em;
+  margin-top: 200px;
+  box-shadow: white;
+  margin-left: 100px;
+  z-index: 9990;
+}
