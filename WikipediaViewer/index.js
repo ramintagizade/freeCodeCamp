@@ -79,7 +79,8 @@ var titles ="";
 function executeQuery(query){
 $(document).ready(function(){
 
-  var url ="https://en.wikipedia.org/w/api.php?action=opensearch&search="+query+"&limit=10&format=json";
+  //var url ="https://en.wikipedia.org/w/api.php?action=opensearch&search="+query+"&limit=10&format=json";
+  var url = "https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?action=opensearch&search="+query+"&limit=10&format=json";
   $.getJSON(url,getData,'jsonp');
 });
 }

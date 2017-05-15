@@ -1,6 +1,11 @@
 .body{
   background-color: blue;
 }
+.what {
+  margin-left: 480px;
+  color: red;
+  font-size: 2em;
+}
 .search-input{
   margin-left: 590px;
   margin-top: 200px;
@@ -28,9 +33,9 @@
 }
 
 .art{
-  background-color: yellow;
+  background-color: gray;
   cursor: pointer;
 }
 .art:hover {
-  border-left: 2px solid orange;
+  border-left: 10px solid orange;
 }
