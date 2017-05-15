@@ -6,6 +6,7 @@
 </head>
   <body>
     <div class="wrapper">
+      <div class="top">
       <nav class="top-fixed-nav">
         <div class="nav-links">
                 <div>
@@ -19,124 +20,108 @@
                 </div>
               </div>
       </nav>
+    </top>
     </br></br>
          <!-- START About content -->
             <div id="about" class="about">
-                <div class="about-content">
-                    <div class="row text-primary">
-                        <div class="col-half">
-                            <h2>About me.</h2>
-                            <p>Full stack web developer </p>
-                        </div>
-                        <div class="col-half">
-                           <div class="photo-rounded">
-                               <img class="image" src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAg5AAAAJDVlMDViMzEyLWY4NjEtNDdlZC04ZDIyLWYyNWFiMGRmMTA5Yw.jpg">
-                           </div>
-                        </div>
-                    </div>
+                <div class="about-img">
+                  <img class="image" src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAg5AAAAJDVlMDViMzEyLWY4NjEtNDdlZC04ZDIyLWYyNWFiMGRmMTA5Yw.jpg" alt="Me">
+                </div>
+                <div class="about-description">
+                      <h2>About me </h2>
+                      <p> Hi, my name is Ramin Taghizada. I am currently working as a Software Developer. I graduated from University Of Manchester in United Kingdom with a Bachelors's degree in Computer Science in 2016.
+                        Since then I have been enhancing my skills through work experience and self-learning. </p>
+                      <p> In 2017 I earned the Front-End Certification from FreeCodeCamp. </p>
+                      <p>My goal is to become a Full-Stack Software Engineer who can have a mastery in all Software Technology. </p>
+
                 </div>
             </div>
         <!-- START Portfolio content -->
+          <br> <br>
             <div id="portfolio" class="portfolio">
-                <div class="portfolio-content">
-                    <h2>Admire my work.</h2>
-                    <div class="row">
-                       <div class="col-third col-md-4">
-                           <div class="placeholder">
-                              Coming soon
-                           </div>
-                           <div class="app">
-                              Local Weather
-                           </div>
-                       </div>
-                       <div class="col-third col-md-4">
-                           <div class="placeholder">
-                              Coming soon
-                              <div class="app">
-                                  Random Quote Machine
-                              </div>
-                           </div>
-                       </div>
-                       <div class="col-third col-md-4">
-                           <div class="placeholder">
-                             Coming soon
-                           </div>
-                           <div class="app">
-                              Pomodoro Clock
-                           </div>
-                       </div>
-                    </div>
-                    <div class="row">
-                       <div class="col-third col-md-4">
-                           <div class="placeholder">
-                              Coming soon
-                           </div>
-                           <div class="app">
-                              Twitch.tv JSON API
-                           </div>
-                       </div>
-                       <div class="col-third col-md-4">
-                           <div class="placeholder">
-                              Coming soon
-                           </div>
-                           <div class="app">
-                              Camper News
-                           </div>
-                       </div>
-                       <div class="col-third col-md-4">
-                           <div class="placeholder">
-                              Coming soon
-                           </div>
-                           <div class="app">
-                              Wikipedia Viewer
-                           </div>
-                       </div>
+                   <h2>Portfolio</h2>
+                   <div id="project-section">
+                     <div class="portfolio-project">
+                       <a href="http://codepen.io/ramintagizade/full/JNKavm" target="_blank">
+                        <img class="thumbnail" src="https://raw.githubusercontent.com/ramintagizade/freeCodeCamp/master/ShowLocalWeather/showlocalwheather.jpg" alt="FreeCodeCamp Weather Viewer image">
+                          <div class="mask">
+                            <h3>Weather Viewer</h3>
+                            <p>This is a project that shows wheather in your local area .
+                          </div>
+                      </a>
                      </div>
-                  <div class="row">
-                       <div class="col-third col-md-4">
-                           <div class="placeholder">
-                              Coming soon
+                     <div class="portfolio-project">
+                       <a href="https://codepen.io/ramintagizade/full/GmMJyy" target="_blank">
+                         <img class="thumbnail" src="https://rawgit.com/ramintagizade/freeCodeCamp/master/PomodoroClock/pomodoroclock.png" alt="Pomodoro Timer preview image">
+                         <div class="mask">
+                           <h3>Pomodoro Timer</h3>
+                           <p>Implementation of the Pomodoro Timer, a productivity app written in JavaScript used for time-management.
                            </div>
-                           <div class="app">
-                              JavaScript Calculator
-                           </div>
-                       </div>
-                       <div class="col-third col-md-4">
-                           <div class="placeholder">
-                              Coming soon
-                           </div>
-                           <div class="app">
-                              Tic Tac Toe Game
-                           </div>
-                       </div>
-                       <div class="col-third col-md-4">
-                           <div class="placeholder">
-                              Coming soon
-                           </div>
-                           <div class="app">
-                              Simon Game
-                           </div>
-                       </div>
+                       </a>
                      </div>
-
+                     <div class="portfolio-project">
+                       <a href="https://codepen.io/ramintagizade/full/aWKoXG" target="_blank">
+                         <img class="thumbnail" src="https://rawgit.com/ramintagizade/freeCodeCamp/master/TicTacToeGame/tictactoe.png" alt="Tic Tac Toe image">
+                         <div class="mask">
+                           <h3>TicTacToe Game</h3>
+                           <p>Implementation of the unbeatable TicTacToe Game, an AI Game written  in JavaScript .
+                           </div>
+                       </a>
+                     </div>
+                     <div class="portfolio-project">
+                       <a href="https://codepen.io/ramintagizade/full/aWKoXG" target="_blank">
+                         <img class="thumbnail" src="https://rawgit.com/ramintagizade/freeCodeCamp/master/RandomQuoteMachine/randomquote.png" alt="Random Quote Machine image">
+                         <div class="mask">
+                           <h3>Random Quote Machine</h3>
+                           <p>Implementation of the Random Quote Machine, an API app  written  in JavaScript .
+                           </div>
+                       </a>
+                     </div>
+                     <div class="portfolio-project">
+                       <a href="https://codepen.io/ramintagizade/full/dWOjvX" target="_blank">
+                         <img class="thumbnail" src="https://rawgit.com/ramintagizade/freeCodeCamp/master/TwitchStatus/twitch.png" alt="Random Quote Machine image">
+                         <div class="mask">
+                           <h3>Twitch.tv JSON API </h3>
+                           <p>This is a project that shows pre-defined channels and their current status whether they are streaming or not .
+                           </div>
+                       </a>
+                     </div>
+                     <div class="portfolio-project">
+                       <a href="https://codepen.io/ramintagizade/full/VbMZgr" target="_blank">
+                         <img class="thumbnail" src="https://rawgit.com/ramintagizade/freeCodeCamp/master/JavascriptCalculator/calculator.png" alt="Random Quote Machine image">
+                         <div class="mask">
+                           <h3>Javascript Calculator  </h3>
+                           <p>This is a project that implements a calculator using Javascript .
+                           </div>
+                       </a>
+                     </div>
+                     <div class="portfolio-project">
+                       <a href="https://codepen.io/ramintagizade/full/zwBXma" target="_blank">
+                         <img class="thumbnail" src="https://rawgit.com/ramintagizade/freeCodeCamp/master/WikipediaViewer/input.png" alt="Random Quote Machine image">
+                         <div class="mask">
+                           <h3>Wikipedia Viewer  </h3>
+                           <p>This is a project that uses Wikipedia API to search contents  .
+                           </div>
+                       </a>
+                     </div>
+                   </div>
                 </div>
             </div>
 
         <!-- START Contact content -->
             <div id="contact" class="contact">
-                <div class="contact-content">
-                    <div class="row">
-                       <h2>Find me  </h2>
-                        <ul>
-                            <li>
+
+
+                       <h2>Contact </h2>
+                       <br>
+                        <p> If you have any questions , please contact me .<p> </br>
                                 <i class="fa fa-inbox"></i><a href="mailto:ramintagizade@mail.ru">ramintagizade@mail.ru</a>
-                            </li>
-                            <li>
-                                <i class="fa fa-twitter"></i><a href="https://www.twitter.com/ramintghz">Ramin</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                              </br>
+                                  <i class="fa fa-inbox"></i><a href="mailto:ramintagizade718@gmail.com">ramintagizade718@gmail.com</a>
+
+
+
+
             </div>
             <!-- END Contact content -->
             <!-- START Home content -->
@@ -145,9 +130,9 @@
                         <h1>Get <strong>social</strong> </h1>
                         <h3>Connect with me !</h3>
                         <div class="social-icons">
-                            <a href="https://www.twitter.com/ramintghz"> <button ><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</button><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                            <a href="https://www.linkedin.com/in/ramin-taghizada-6b213454"> <button><i class="fa fa-linkedin fa-2x">Linkedin</button></i></a>
-                            <a href="https://github.com/ramintagizade"><button><i class="fa fa-github fa-2x">Github</button></i></a>
+
+                            <a href="https://www.linkedin.com/in/ramin-taghizada-6b213454" target="_blank"> <button><i class="fa fa-linkedin fa-2x">Linkedin</button></i></a>
+                            <a href="https://github.com/ramintagizade" target="_blank"><button><i class="fa fa-github fa-2x">Github</button></i></a>
                         </div>
 
                     </div>
