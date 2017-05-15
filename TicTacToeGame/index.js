@@ -191,7 +191,7 @@ function AIWithMinMax(board){
     if(score == 10)
       return 10-depth;
     if(score==-10)
-      return depth-10;
+      return -10+depth;
     if(!isLeft(board))
       return 0;
     //if it maximises
@@ -200,7 +200,7 @@ function AIWithMinMax(board){
       for(var i=0;i<3;i++){
         for(var j=0;j<3;j++){
           if(board[i][j]==""){
-            board[i][j] = player;
+            board[i][j] = opponent;
             best = max(best,minimax(board,depth+1,!isMax));
             board[i][j] = "";
           }
@@ -214,7 +214,7 @@ function AIWithMinMax(board){
       for(var i=0;i<3;i++){
         for(var j=0;j<3;j++){
           if(board[i][j]==""){
-            board[i][j] = opponent;
+            board[i][j] = player;
             best = min(best,minimax(board,depth+1,!isMax));
             board[i][j] = "";
           }
@@ -299,6 +299,7 @@ function clickCells(fn){
   checkForClick();
 }
 var cnt = 0;
+var trick = false;
 function fillUp1(){
   if($(".choose1").val()){
       if(!firstMove){
@@ -330,6 +331,7 @@ function fillUp1(){
           nextTurn = 1;
           $(".computer-turn").hide();
           $(".your-turn").show();
+          trick = false;
         }
         firstMove = true;
       }
@@ -368,18 +370,24 @@ function fillUp1(){
         }
         $(".computer-turn").show();
         $(".your-turn").hide();
-        if(!once){
+        //if(!once){
            //generateRandom();
            //AI();
-           var tt = [];
-           tt = AIWithMinMax(board);
-           x = tt[0];
-           y = tt[1];
-           board[x][y] = player2Val;
-           console.log(x + " x y "+ y);
-           $(b[x][y]).text(player2Val);
-           once = true;
-        }
+           //if(!trick){
+            // $(b[1][1]).text(player2Val);
+            // board[1][1] = player2Val;
+            // trick = true;
+           //}
+           //else {
+            var tt = [];
+            tt = AIWithMinMax(board);
+            x = tt[0];
+            y = tt[1];
+            board[x][y] = player2Val;
+            console.log(x + " x y "+ y);
+            $(b[x][y]).text(player2Val);
+            //}
+        //}
         if(whoWins1(player1Val)==-1){
           nextTurn = 2;
           player2Score++;
