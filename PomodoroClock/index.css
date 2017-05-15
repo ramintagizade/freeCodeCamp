@@ -1,3 +1,16 @@
+body{
+  background-color: gray;
+}
+.pomodoro{
+  font-size: 2em;
+  margin-left: 520px;
+  color:  red;
+  background-image: url("http://a4.mzstatic.com/us/r30/Purple5/v4/e3/86/83/e3868360-50af-dbb3-1919-f15a593bd1e9/icon175x175.png");
+  background-repeat: no-repeat;
+  height: 150px;
+  background-size: cover;
+  width: 250px;
+}
 .circle {
   width: 300px;
   height: 300px;
@@ -9,14 +22,14 @@
 .break{
   position: absolute;
   margin-left: 500px;
-  margin-top: -70px;
+  margin-top: 70px;
   font-size: 0.7em;
 }
 .session{
   font-size: 0.7em;
   position: absolute;
   margin-left: 700px;
-  margin-top: -70px;
+  margin-top: 70px;
 }
 .bdecrease{
   font-size: 2em;

@@ -74,6 +74,8 @@ function startSession(){
 
     if(minutes==0 && seconds==0){
       clearInterval(counter);
+      var audio = new Audio('beep-05.mp3');
+      audio.play();
       startBreak();
       return;
     }
@@ -115,6 +117,8 @@ function startBreak(){
     }
     if(minutes==0 && seconds==0){
       clearInterval(counter);
+      var audio = new Audio('beep-05.mp3');
+      audio.play();
       startSession();
       return;
     }
