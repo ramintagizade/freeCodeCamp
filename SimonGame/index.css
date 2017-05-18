@@ -1,0 +1,183 @@
+body{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: rgb(150,0,50,0.5);
+}
+.outer-circle{
+    background-color:#333333;
+    border-radius: 365px;
+    height: 600px;
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 600px;
+    z-index: 1;
+    border: 20px solid #4e3232;
+}
+.red-area {
+    position: absolute;
+    background-color:  red;
+    border-top-right-radius: 365px;
+    margin-left: 300px;
+    width: 300px;
+    height: 300px;
+    border-left:2.5px solid #4e3232;
+    cursor: pointer;
+}
+.blue-area {
+    position: absolute;
+    background-color:  blue;
+    border-bottom-right-radius: 365px;
+    margin-left: 300px;
+    margin-top: 300px;
+    width: 300px;
+    height: 300px;
+    border-top:2.5px solid #4e3232;
+    border-left:2.5px solid #4e3232;
+    cursor: pointer;
+}
+.yellow-area {
+    position: absolute;
+    background-color:  yellow;
+    border-bottom-left-radius: 365px;
+    margin-left: 0px;
+    margin-top: 300px;
+    width: 300px;
+    height: 300px;
+    border-top:2.5px solid #4e3232;
+    border-right:2.5px solid #4e3232;
+    cursor: pointer;
+}
+.green-area {
+    position: absolute;
+    background-color:  green;
+    border-top-left-radius: 365px;
+    margin-left: 0px;
+    width: 300px;
+    height: 300px;
+    border-right:2.5px solid #4e3232;
+    cursor: pointer;
+}
+.inner-circle{
+  position: absolute;
+  background-color: white;
+  border-radius: 360px;
+  border: 15px solid #4e3232;
+  height: 360px;
+  margin-left: 110px;
+  position: relative;
+  margin-top: 110px;
+  width: 360px;
+  z-index: 4;
+}
+.simon{
+  margin-left: 110px;
+  font-size: 3em;
+  font-weight: bold;
+}
+.reg{
+  font-size: 0.4em;
+}
+.count{
+  position: absolute;
+  width: 60px;
+  height: 45px;
+  background-color: #333333;
+  margin-left: 70px;
+  border-radius: 10px;
+  border: 4px solid #4e3232;
+}
+.start{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: red;
+  margin-top: 7px;
+  margin-left: 160px;
+  border: 4px solid #333333;
+  cursor: pointer;
+}
+.strict{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: yellow;
+  margin-top: 7px;
+  margin-left: 230px;
+  border: 4px solid #333333;
+  cursor: pointer;
+}
+.txtcount{
+  margin-top: 55px;
+  font-size: 0.7em;
+  font-weight: bold;
+  margin-left: 10px;
+}
+.txtstart{
+  margin-top: 47px;
+  font-size: 0.7em;
+  font-weight: bold;
+  margin-left: -2px;
+}
+.txtstrict{
+  margin-top: 47px;
+  font-size: 0.7em;
+  font-weight: bold;
+  margin-left: -2px;
+}
+.strict-lamp{
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: black;
+  margin-top: -22px;
+  margin-left: 9px;
+  border: 2px solid #4e3232;
+}
+.toggle{
+  width: 38px;
+  height: 19px;
+  background-color: #000000;
+  margin-left: 160px;
+  margin-top: 150px;
+}
+.off{
+  position: absolute;
+  margin-left: -29px;
+  font-weight: bold;
+  float: left;
+  font-size: 0.8em;
+  margin-top: 3px;
+}
+.on{
+  position: absolute;
+  margin-left: 43px;
+  font-weight: bold;
+  font-size: 0.8em;
+  margin-top: 3px;
+}
+.offbtn{
+  position: absolute;
+  float: left;
+  width: 15px;
+  height: 15px;
+  background-color: #3193de;
+  margin-top: 0.45px;
+  border-radius: 3px;
+  border: 2px solid #4e3232;
+  cursor: pointer;
+  margin-left: 0px;
+}
+
+.level{
+  position: absolute;
+  margin-top: 6px;
+  margin-left: 14px;
+  color: red;
+  font-size: 2em;
+  font-weight: bold;
+  opacity: 0.3;
+}
