@@ -1,0 +1,20 @@
+.input{
+  margin:20px;
+  width:600px;
+  float:left;
+}
+.textarea {
+  width:600px;
+  height:300px;
+}
+.output{
+  position:absolute;
+  width:500px;
+  height:500px;
+  margin-left:640px;
+  margin-top:20px;
+}
+.title{
+  margin-left: 500px;
+  color:blue;
+}
