@@ -1,0 +1,38 @@
+body{
+  background-color: #e6f2ff !important;
+}
+.app{
+  width: 96%;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.addRecipe{
+  margin-top: 20px;
+  margin-left: 85px;
+}
+.modal-container {
+  position: relative;
+}
+.modal-container .modal, .modal-container .modal-backdrop {
+  position: absolute;
+}
+.Main{
+  width: 86%;
+  background-color: gray;
+  margin-top: 15px;
+  margin-left: 85px;
+  border: 3px solid #fff;
+  border-radius: 5px;
+  height:auto;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+.ListGroupDiv{
+  border-radius: 5px;
+}
+.panel-default{
+  background-color: #99ccff !important;
+}
+.panel-heading{
+  background-color: #3ff !important;
+  cursor:pointer;
+}
