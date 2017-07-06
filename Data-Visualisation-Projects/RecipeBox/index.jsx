@@ -54,20 +54,32 @@ const mapDispatchToProps = (dispatch) => {
     }
   };
 };
-var InitialRecipes = {};
-InitialRecipes = {"Pumpkin Pie":"Pumpkin Puree,Sweetened Condensed Milk,Eggs,Pumpkin Pie Spice,Pie Crust",
-  "Spaghetti":"Noodles,Tomato Sauce, Meatballs","Onion Pie":"Onion,Pie Crust,Yummy right"};
-  console.log(InitialRecipes);
+function initialRecipe(){
+  if(localStorage.getItem('initialRecipe')!=1){
+    localStorage.setItem('initialRecipe',1);
+    var InitialRecipes = {};
+    InitialRecipes = {"Pumpkin Pie":"Pumpkin Puree,Sweetened Condensed Milk,Eggs,Pumpkin Pie Spice,Pie Crust",
+      "Spaghetti":"Noodles,Tomato Sauce, Meatballs","Onion Pie":"Onion,Pie Crust,Yummy right"};
+    var oldRecipes = JSON.parse(localStorage.getItem('recipebox')) || {};
+    for(var key in InitialRecipes){
+      oldRecipes[key] = InitialRecipes[key];
+      localStorage.setItem('recipebox', JSON.stringify(oldRecipes));
+    }
+  }
+}
+initialRecipe();
 function getRecipesByHash(){
+  var oldRecipes = JSON.parse(localStorage.getItem('recipebox')) || {};
   var byHash = {};
-  for(var key in InitialRecipes){
-    byHash[key] = {id:key,ingredient:InitialRecipes[key]};
+  for(var key in oldRecipes){
+    byHash[key] = {id:key,ingredient:oldRecipes[key]};
   }
   return byHash;
 }
 function getRecipes(){
+  var oldRecipes = JSON.parse(localStorage.getItem('recipebox')) || {};
   var temp = [];
-  for(var key in InitialRecipes){
+  for(var key in oldRecipes){
     temp.push(key);
   }
   return temp;
@@ -102,7 +114,7 @@ const RecipeReducer = (state = initialState,action) => {
       delete state.byHash[action.id]
       return {
         byId:itemIds,
-        byHash:state.byHash
+        byHash:state.byHash,
       }
     case FIRE_MODAL :
       return {...state,fireModal:action.fireModal};
@@ -150,9 +162,7 @@ const Trigger = React.createClass({
     var oldRecipes = JSON.parse(localStorage.getItem('recipebox')) || {};
     if(this.inputName.value && this.inputIngredient.value){
       const key = this.inputName.value;
-      var newRecipe = {};
-      newRecipe[key] = this.inputIngredient.value;
-      oldRecipes[this.inputName.value] = newRecipe[key];
+      oldRecipes[key] = this.inputIngredient.value;
       localStorage.setItem('recipebox', JSON.stringify(oldRecipes));
       this.props.addNewRecipe(this.inputName.value,this.inputIngredient.value);
     }
@@ -209,9 +219,7 @@ const TriggerEdit = React.createClass({
     var oldRecipes = JSON.parse(localStorage.getItem('recipebox')) || {};
     if(this.inputName.value && this.inputIngredient.value){
       const key = this.inputName.value;
-      var newRecipe = {};
-      newRecipe[key] = this.inputIngredient.value;
-      oldRecipes[this.inputName.value] = newRecipe[key];
+      oldRecipes[key] = this.inputIngredient.value;
       localStorage.setItem('recipebox', JSON.stringify(oldRecipes));
       this.props.updateRecipe(this.inputName.value,this.inputIngredient.value);
       this.props.fireModal(false);
@@ -270,7 +278,7 @@ const PanelList = React.createClass({
   },
   handleRecipe(name,ingredient){
     this.props.fireModal(false);
-    this.setState({recipeId:name,recipeIngredient:ingredient});
+    this.setState({recipeId:name,recipeIngredient:ingredient},()=>console.log("handling .."));
   },
   render(){
     var Panel = ReactBootstrap.Panel;
@@ -281,13 +289,13 @@ const PanelList = React.createClass({
     var Recipes = this.props.recipes.byHash;
     var Keys = this.props.recipes.byId;
     const self = this;
-    var List = Keys.map(function(key,idx){
+    var List = Keys.map(function(key){
       var ingredient = Recipes[key].ingredient;
       var items = ingredient.split(',');
       var mappedItems = items.map(function(item){
         return <ListGroupItem>{item}</ListGroupItem>
       });
-      return   <Panel collapsible  eventKey={idx} header={key} onSelect={()=>self.handleRecipe(key,ingredient)}>
+      return   <Panel collapsible  eventKey={key} header={key} onSelect={()=>self.handleRecipe(key,ingredient)}>
           <h4 className="text-center">Ingredients</h4>
         <div className="ListGroupDiv" >
           <ListGroup  fill>
